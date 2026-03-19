@@ -51,7 +51,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.1</version>
                 <configuration>
-                    <mainClass>HelloApp</mainClass>
+                    <mainClass>Main</mainClass>
                     <!-- Default argument if none provided -->
                     <arguments>
                         <argument>World</argument>
