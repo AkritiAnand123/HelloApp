@@ -5,13 +5,32 @@
 //     }
 // }
 
-public class Main {
-    public static void main(String[] args){
-        String name = "World";
+// public class Main {
+//     public static void main(String[] args){
+//         String name = "World";
 
-        if(args.length > 0){
-            name = args[0];
+//         if(args.length > 0){
+//             name = args[0];
+//         }
+//         System.out.println("Hello" + name + "!");
+//     } 
+// }
+
+public class Main {
+    public static void main(String[] args) {
+        if (args.length == 0) {
+            System.out.println("Hello ,World");
+        } else {
+            StringBuilder names = new StringBuilder();
+            for (int i = 0; i < args.length; i++) {
+                names.append(args[i]);
+
+                if (i != args.length - 1) {
+                    names.append(", ");
+                }
+            }
+            System.out.println("Hello, " + names +
+                    "!");
         }
-        System.out.println("Hello" + name + "!");
-    } 
+    }
 }
