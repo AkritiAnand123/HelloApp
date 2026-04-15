@@ -1,19 +1,16 @@
 public class Main {
-
     public static void main(String[] args) {
 
-        if (args.length == 0) {
-            System.out.println("Hello, World!");
-            return;
+        String message;
+
+        if (args.length > 0) {
+
+            message = "Hello, " + String.join(", ", args) + "!";
+        } else {
+
+            message = "Hello, World!";
         }
-        StringBuilder nameBuilder = new StringBuilder();
 
-        for (String name : args) {
-            nameBuilder.append(name).append(", ");
-        }
-
-        String finalNames = nameBuilder.substring(0, nameBuilder.length() - 2);
-
-        System.out.println("Hello, " + finalNames + "!");
+        System.out.println(message);
     }
 }
